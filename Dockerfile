@@ -6,7 +6,7 @@ ENV TEAMCITY_DATA_PATH /opt/teamcity-data
 RUN apt-get update
 RUN apt-get install -y wget default-jre
 RUN mkdir /opt/teamcity
-RUN wget -q -O - http://download-ln.jetbrains.com/teamcity/TeamCity-$TEAM_CITY_VERSION.tar.gz | tar -C /opt/teamcity xzf -
+RUN wget -q -O - http://download-ln.jetbrains.com/teamcity/TeamCity-$TEAM_CITY_VERSION.tar.gz | tar xzf - -C /opt/teamcity
 
 VOLUME ["/opt/teamcity-data"]
 EXPOSE 8111
