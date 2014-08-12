@@ -7,6 +7,8 @@ if [ -n "$DB_HOST" ]; then
 	echo "connectionUrl=jdbc:postgresql://$DB_HOST/$DB_NAME" > "$CONFIG_PATH"
 	echo "connectionProperties.user=$DB_USER" >> "$CONFIG_PATH"
 	echo "connectionProperties.password=$DB_PASSWORD" >> "$CONFIG_PATH"
+	echo "maxConnections=50" >> "$CONFIG_PATH"
+	echo "testOnBorrow=false" >> "$CONFIG_PATH"
 fi
 
 cp /tmp/$JDBC_NAME $TEAMCITY_DATA_PATH/lib/jdbc/$JDBC_NAME
