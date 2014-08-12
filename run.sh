@@ -1,6 +1,6 @@
 #!/bin/bash
 if [ -n "$DB_HOST" ]; then
-	CONFIG_PATH = "$TEAMCITY_DATA_PATH/config/database.properties"
+	CONFIG_PATH="$TEAMCITY_DATA_PATH/config/database.properties"
 	echo "$CONFIG_PATH"
 	touch "$CONFIG_PATH"
 
