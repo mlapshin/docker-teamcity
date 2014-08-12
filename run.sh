@@ -8,5 +8,5 @@ if [ -n "$DB_HOST" ]; then
 	echo "connectionProperties.password=$DB_PASSWORD" >> $CONFIG_PATH
 fi
 
-wget -q http://jdbc.postgresql.org/download/postgresql-9.3-1102.jdbc41.jar -P $TEAMCITY_DATA_PATH/lib/jdbc
+cp /tmp/$JDBC_NAME $TEAMCITY_DATA_PATH/lib/jdbc/$JDBC_NAME
 /opt/teamcity/TeamCity/bin/teamcity-server.sh run
