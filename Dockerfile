@@ -10,7 +10,8 @@ RUN mkdir /opt/teamcity
 RUN wget -q -O - http://download-ln.jetbrains.com/teamcity/TeamCity-$TEAM_CITY_VERSION.tar.gz | tar xzf - -C /opt/teamcity
 RUN wget -q http://jdbc.postgresql.org/download/$JDBC_NAME -P /tmp/$JDBC_NAME
 
-Add run.sh /run.sh
+ADD run.sh /run.sh
+RUN chmod +x /run.sh
 
 VOLUME ["/opt/teamcity-data"]
 EXPOSE 8111
