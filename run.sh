@@ -1,6 +1,6 @@
 #!/bin/bash
 if [ -n "$DB_HOST" ]; then
-	CONFIG_PATH = $TEAMCITY_DATA_PATH/config/database.properties
+	$CONFIG_PATH = $TEAMCITY_DATA_PATH/config/database.properties
 	touch $CONFIG_PATH
 
 	echo connectionUrl=jdbc:postgresql://$DB_HOST/$DB_NAME > $CONFIG_PATH
