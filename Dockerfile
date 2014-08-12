@@ -14,4 +14,4 @@ Add run.sh /run.sh
 
 VOLUME ["/opt/teamcity-data"]
 EXPOSE 8111
-CMD /run
+CMD /run.sh
