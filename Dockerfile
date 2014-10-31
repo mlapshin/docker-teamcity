@@ -5,7 +5,7 @@ ENV TEAMCITY_DATA_PATH /opt/teamcity-data
 ENV JDBC_NAME postgresql-9.3-1102.jdbc41.jar
 
 RUN apt-get update
-RUN apt-get install -y wget default-jre
+RUN apt-get install -y --no-install-recommends wget default-jre
 RUN apt-get install -yf tzdata tzdata-java
 
 RUN mkdir /opt/teamcity
